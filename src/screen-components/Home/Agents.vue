@@ -5,6 +5,7 @@
     import { getValorantAgents } from "../../services/api"
 
     import AgentCard from "../../components/AgentCard.vue"
+    import Loading from "../../components/Loading.vue"
 
     const agents: Ref<TAgentAPIResponse | null> = ref(null)
 
@@ -22,21 +23,17 @@
 </script>
 
 <template>
-    <section v-if="agents?.data">
+    <section class="valorant-agents-section" v-if="agents?.data">
         <AgentCard v-for="agent in agents.data" :key="agent.uuid" :agent-name="agent.displayName" :agent-role="agent.role?.displayName" :agent-image-src="agent.displayIcon" />
     </section>
 
-    <section v-else>
-        <h1>Loading...</h1>
+    <section class="loading-section" v-else>
+        <Loading />
     </section>
 </template>
 
 <style lang="scss" scoped>
-    .abuble {
-        color: white;
-    }
-
-    section {
+    .valorant-agents-section {
         margin: auto;
         max-width: 1300px;
         padding-top: 8.125rem;
@@ -46,5 +43,13 @@
         place-items: center;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 3.125rem;
+    }
+
+    .loading-section {
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 </style>

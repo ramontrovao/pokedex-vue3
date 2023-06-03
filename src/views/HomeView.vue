@@ -10,6 +10,6 @@ import Agents from "../screen-components/Home/Agents.vue"
 
 <style lang="scss" scoped>
   main {
-    min-height: calc(100vh);
+    min-height: 100vh;
   }
 </style>

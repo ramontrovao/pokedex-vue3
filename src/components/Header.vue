@@ -12,6 +12,7 @@
 
     header {
         position: fixed;
+        z-index: 50;
 
         width: 100%;
         height: 4.125rem;
