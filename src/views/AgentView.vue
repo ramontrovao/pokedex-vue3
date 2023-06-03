@@ -1,6 +1,9 @@
+<script setup lang="ts">
+</script>
+
 <template>
   <main>
-    <h1>Pokemon info</h1>
+    <h1>Agent info</h1>
   </main>
 </template>
 

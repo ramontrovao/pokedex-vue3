@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Pokemons from "../screen-components/Home/Pokemons.vue"
+import Agents from "../screen-components/Home/Agents.vue"
 </script>
 
 <template>
   <main>
-    <Pokemons />
+    <Agents />
   </main>
 </template>
 
