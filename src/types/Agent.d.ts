@@ -28,11 +28,6 @@ export type TAgent = {
   voiceLine: TVoiceLine;
 };
 
-export type TAgentAPIResponse = {
-  status: number;
-  data: TAgent[];
-};
-
 export type TAbility = {
   slot: string;
   displayName: string;

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Agents from "../screen-components/Home/Agents.vue"
+import AgentsSection from "../screen-components/Home/AgentsSection.vue"
 </script>
 
 <template>
   <main>
-    <Agents />
+    <AgentsSection />
   </main>
 </template>
 

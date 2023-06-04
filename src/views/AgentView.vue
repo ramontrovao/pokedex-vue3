@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import AgentSection from "../screen-components/Agent/AgentSection.vue"
 </script>
 
 <template>
   <main>
-    <h1>Agent info</h1>
+    <AgentSection />
   </main>
 </template>
 

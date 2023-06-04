@@ -1,15 +1,20 @@
 <script lang="ts" setup>
+import { RouterLink } from 'vue-router';
+
     export interface IAgentCardProps {
+        agentUuid: string;
         agentName: string;
         agentImageSrc: string;
         agentRole: string;
     }
 
-    defineProps<IAgentCardProps>()
+    withDefaults(defineProps<IAgentCardProps>(), {
+        agentRole: "Sem classe"
+    })
 </script>
 
 <template>
-    <div class="agent-card">
+    <RouterLink :to="`/agent/${agentUuid}`" class="agent-card">
         <div class="agent-infos">
             <strong>{{ agentName }}</strong>
 
@@ -21,7 +26,7 @@
         </div>
 
         <img :src="agentImageSrc" class="agent-img" alt="" />
-    </div>
+    </RouterLink>
 </template>
 
 <style lang="scss" scoped>
@@ -34,6 +39,8 @@
 
         background: $gray-100;
         border-radius: 16px;
+        text-decoration: none;
+        transition: 0.4s;
 
         display: flex;
         justify-content: space-between;
@@ -42,6 +49,10 @@
         strong {
             font-size: $text-md;
         }
+
+        &:hover {
+        scale: 1.05;
+    }
     }
 
     .agent-infos {
@@ -52,6 +63,10 @@
         align-items: flex-start;
         justify-content: center;
         gap: 1rem;
+
+        strong, p {
+            color: #000;
+        }
     }
 
     .agent-img {

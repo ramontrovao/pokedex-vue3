@@ -1,13 +1,13 @@
 <script lang="ts" setup>
     import { onMounted, ref, type Ref } from "vue";
 
-    import type { TAgentAPIResponse } from "../../types/Agent";
     import { getValorantAgents } from "../../services/api"
+    import type { TAgent } from "@/types/Agent";
 
     import AgentCard from "../../components/AgentCard.vue"
     import Loading from "../../components/Loading.vue"
 
-    const agents: Ref<TAgentAPIResponse | null> = ref(null)
+    const agents: Ref<{ status: number, data: TAgent[] } | null> = ref(null)
 
     const fetchAgents = async () => {
         try {
@@ -24,7 +24,7 @@
 
 <template>
     <section class="valorant-agents-section" v-if="agents?.data">
-        <AgentCard v-for="agent in agents.data" :key="agent.uuid" :agent-name="agent.displayName" :agent-role="agent.role?.displayName" :agent-image-src="agent.displayIcon" />
+        <AgentCard v-for="agent in agents.data" :key="agent.uuid" :agent-uuid="agent.uuid" :agent-name="agent.displayName" :agent-role="agent.role?.displayName" :agent-image-src="agent.displayIcon" />
     </section>
 
     <section class="loading-section" v-else>
