@@ -62,6 +62,10 @@
         place-items: center;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 3.125rem;
+
+        @media (max-width: 768px) {
+          padding: 10.125rem 1rem 1rem 1rem;
+        }
     }
 
     .loading-section {
