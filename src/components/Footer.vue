@@ -10,8 +10,9 @@
     @import '../assets/vars.scss';
 
     footer {
-        height: 4.125rem;
-        padding: 0rem 4rem;
+        width: 100%;
+        max-width: 1300px;
+        padding: 1.5rem;
 
         display: flex;
         justify-content: center;

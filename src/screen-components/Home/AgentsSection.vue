@@ -35,10 +35,10 @@
 <style lang="scss" scoped>
     .valorant-agents-section {
         margin: auto;
-        max-width: 1300px;
-        padding-top: 8.125rem;
-
         width: 100%;
+        max-width: 1300px;
+        padding: 8.125rem 1.5rem 1.5rem 1.5rem;
+
         display: grid;
         place-items: center;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
