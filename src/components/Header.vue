@@ -1,12 +1,28 @@
 <script lang="ts" setup>
 import { RouterLink } from 'vue-router';
 
+import SearchBar from "../components/SearchBar.vue"
+
+export interface IHeaderProps {
+    hasSearchBar?: boolean;
+}
+
+withDefaults(defineProps<IHeaderProps>(), {
+    hasSearchBar: false,
+})
 </script>
 
 <template>
-    <header>
-        <RouterLink to="/" class="logo"><span>VALORANT</span> but only agents</RouterLink>
-    </header>
+  <header>
+    <RouterLink
+      to="/"
+      class="logo"
+    >
+      <span>VALORANT</span> agents
+    </RouterLink>
+
+    <SearchBar v-if="hasSearchBar" />
+  </header>
 </template>
 
 <style lang="scss" scoped>
@@ -16,12 +32,12 @@ import { RouterLink } from 'vue-router';
         position: fixed;
         z-index: 50;
 
+        min-height: 4.125rem;
         width: 100%;
-        height: 4.125rem;
-        padding: 3rem 4rem;
+        padding: 1.5rem 5rem;
 
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
 
         background-color: $background;
@@ -42,6 +58,15 @@ import { RouterLink } from 'vue-router';
             &:hover {
                 opacity: 0.8;
             }
+        }
+
+        @media (max-width: 768px) {
+            padding: 1.5rem;
+
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
     }
 </style>

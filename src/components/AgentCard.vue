@@ -14,26 +14,33 @@ import { RouterLink } from 'vue-router';
 </script>
 
 <template>
-    <RouterLink :to="`/agent/${agentUuid}`" class="agent-card">
-        <div class="agent-infos">
-            <strong>{{ agentName }}</strong>
+  <RouterLink
+    :to="`/agent/${agentUuid}`"
+    class="agent-card"
+  >
+    <div class="agent-infos">
+      <strong>{{ agentName }}</strong>
 
-            <div class="agent-roles">
-                <div>
-                    <p>{{ agentRole }}</p>
-                </div>
-            </div>
+      <div class="agent-roles">
+        <div>
+          <p>{{ agentRole }}</p>
         </div>
+      </div>
+    </div>
 
-        <img :src="agentImageSrc" class="agent-img" alt="" />
-    </RouterLink>
+    <img
+      :src="agentImageSrc"
+      class="agent-img"
+      alt=""
+    >
+  </RouterLink>
 </template>
 
 <style lang="scss" scoped>
     @import "../assets/vars.scss";
 
     .agent-card {
-        min-width: 20rem;
+        min-width: 19.5rem;
         height: 10rem;
         padding: 2rem 0 2rem 2rem;
 
@@ -53,7 +60,11 @@ import { RouterLink } from 'vue-router';
 
         &:hover {
         scale: 1.05;
-    }
+        }
+
+        @media (max-width: 425px) {
+            min-width: 17rem;
+        }
     }
 
     .agent-infos {

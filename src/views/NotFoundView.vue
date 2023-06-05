@@ -5,7 +5,9 @@
 <template>
   <main>
     <h1>404 - Não encontrado ;(</h1>
-    <RouterLink to="/">Voltar</RouterLink>
+    <RouterLink to="/">
+      Voltar
+    </RouterLink>
   </main>
 </template>
 
@@ -21,11 +23,14 @@
     align-items: center;
     gap: 1rem;
 
+    background: $background;
+
     h1 {
         color: $text-color;
     }
 
     a {
+        color: $red-400;
         font-size: $text-md;
     }
   }

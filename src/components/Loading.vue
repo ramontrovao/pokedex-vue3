@@ -1,7 +1,9 @@
 <script lang="ts" setup></script>
 
 <template>
-   <div class="loading-box"><div></div></div>
+  <div class="loading-box">
+    <div />
+  </div>
 </template>
 
 <style lang="scss">

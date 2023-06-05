@@ -30,36 +30,62 @@ onMounted(fetchAgent)
 </script>
 
 <template>
-    <section v-if="agent?.data" class="valorant-agent-section">
-        <div class="agent-portrait">
-            <img :src="agent.data.fullPortrait" alt="">
-        </div>
+  <section
+    v-if="agent?.data"
+    class="valorant-agent-section"
+  >
+    <div class="agent-portrait">
+      <img
+        :src="agent.data.fullPortrait"
+        alt=""
+      >
+    </div>
 
-        <div class="agent-infos">
-            <header>
-                <h2>{{ agent.data.displayName }} <img class="icon-small" :src="agent.data.displayIconSmall" alt=""> </h2>
-                <p class="agent-role">{{ agent.data.role.displayName }}</p>
-            </header>
+    <div class="agent-infos">
+      <header>
+        <h2>
+          {{ agent.data.displayName }} <img
+            class="icon-small"
+            :src="agent.data.displayIconSmall"
+            alt=""
+          >
+        </h2>
+        <p class="agent-role">
+          {{ agent.data.role.displayName }}
+        </p>
+      </header>
 
-            <main>
-                <p class="agent-description">{{ agent.data.description }}</p>
-            </main>
+      <main>
+        <p class="agent-description">
+          {{ agent.data.description }}
+        </p>
+      </main>
 
-            <footer>
-                <strong>Skills</strong>
+      <footer>
+        <strong>Skills</strong>
 
-                <ul>
-                  <li v-for="ability in agent.data.abilities" class="ability">
-                    {{ ability.displayName }}
-                </li>
-                </ul>
-            </footer>
-        </div>
-    </section>
+        <ul>
+          <li
+            v-for="ability in agent.data.abilities"
+            class="ability"
+          >
+            {{ ability.displayName }} <img
+              :src="ability.displayIcon"
+              class="icon-small"
+              alt=""
+            >
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </section>
 
-    <section v-else class="loading-section">
-        <Loading />
-    </section>
+  <section
+    v-else
+    class="loading-section"
+  >
+    <Loading />
+  </section>
 </template>
 
 <style lang="scss">
@@ -115,11 +141,6 @@ onMounted(fetchAgent)
             }
 
             header {
-                .icon-small {
-                    width: 1.25rem;
-                    height: 1.25rem;
-                }
-
                 .agent-role {
                     margin-top: 0.25rem;
 
@@ -138,6 +159,11 @@ onMounted(fetchAgent)
                     margin-left: 1.25rem;
                     margin-top: 1rem;
                 }
+            }
+
+            .icon-small {
+                width: 1.25rem;
+                height: 1.25rem;
             }
         }
 

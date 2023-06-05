@@ -1,9 +1,9 @@
 <script lang="ts" setup></script>
 
 <template>
-    <footer>
-        <span>Feito com &hearts; por Ramon Pinheiro</span>
-    </footer>
+  <footer>
+    <span>Feito com &hearts; por Ramon Pinheiro</span>
+  </footer>
 </template>
 
 <style lang="scss" scoped>

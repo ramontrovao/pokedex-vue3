@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AgentSection from "../screen-components/Agent/AgentSection.vue"
+import AgentSection from '../screen-components/Agent/AgentSection.vue'
 </script>
 
 <template>
@@ -8,8 +8,8 @@ import AgentSection from "../screen-components/Agent/AgentSection.vue"
   </main>
 </template>
 
-<style lang="scss" scoped >
-  main {
-    min-height: 100vh;
-  }
+<style lang="scss" scoped>
+main {
+   min-height: 100vh;
+}
 </style>

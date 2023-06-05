@@ -1,25 +1,7 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-import Header from './components/Header.vue';
-import Footer from './components/Footer.vue';
-
-
+  import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div class="container">
-    <Header />
-    <RouterView />
-    <Footer />
-  </div>
+  <RouterView />
 </template>
-
-<style lang="scss" scoped>
-  @import "./assets/vars.scss";
-
-  .container {
-    min-height: 100vh;
-
-    background-color: $background;
-  }
-</style>
