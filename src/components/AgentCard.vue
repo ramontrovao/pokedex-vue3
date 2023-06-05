@@ -37,14 +37,15 @@ import { RouterLink } from 'vue-router';
         height: 10rem;
         padding: 2rem 0 2rem 2rem;
 
-        background: $gray-100;
-        border-radius: 16px;
-        text-decoration: none;
-        transition: 0.4s;
-
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        text-decoration: none;
+        overflow: hidden;
+        background: linear-gradient(to right, #d3cce3, #eFF4f0);
+        border-radius: 16px;
+        transition: 0.4s;
 
         strong {
             font-size: $text-md;

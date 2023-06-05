@@ -5,7 +5,7 @@ import { RouterLink } from 'vue-router';
 
 <template>
     <header>
-        <RouterLink to="/" class="logo"><span>Valorant</span> Agents</RouterLink>
+        <RouterLink to="/" class="logo"><span>VALORANT</span> but only agents</RouterLink>
     </header>
 </template>
 
